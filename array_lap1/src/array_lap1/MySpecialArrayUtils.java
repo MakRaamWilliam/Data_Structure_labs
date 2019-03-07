@@ -40,4 +40,7 @@ public class MySpecialArrayUtils {
 		 }
 		 
 	 }
+	 public static void acess(int []arr) {
+		   arr[1]=5;
+	   }
 }
