@@ -1,5 +1,7 @@
 package array_lap1;
 
+import java.math.BigInteger;
+
 public class MySpecialArrayUtils {
 
 	public static void reverse(int[] arr) {
@@ -18,7 +20,9 @@ public class MySpecialArrayUtils {
 	 public static double average(int[] arr) {
 		 if(arr.length==0) return 0;
 		 double sum=0;
-		 for(int i = 0; i<arr.length;i++) sum +=arr[i];
+		 for(int i = 0; i<arr.length;i++) {
+			 sum +=arr[i];
+		 }
 		
 	return (sum/arr.length); }
 	 
@@ -38,6 +42,20 @@ public class MySpecialArrayUtils {
 					} if(flag==0) return ; flag =0;
 			 }
 		 }
-		 
 	 }
+		 
+	  public static int [][] transpose(int [][]arr){
+		  int [][]a = new int [arr[0].length][arr.length];
+		    for(int i=0; i<arr.length;i++) {
+		    	for(int j=0;j<arr[0].length;j++) {
+		    		a[j][i]=arr[i][j];
+		    	}
+		    }
+		  
+		 return a; 
+	  }
+	   
+	 
+	 
+	 
 }
