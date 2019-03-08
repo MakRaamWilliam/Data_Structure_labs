@@ -40,7 +40,14 @@ public class MySpecialArrayUtils {
 		 }
 		 
 	 }
-	 public static void acess(int []arr) {
-		   arr[1]=5;
-	   }
+	  public static int [][] transpose(int [][]arr){
+		  int [][]a = new int [arr[0].length][arr.length];
+		    for(int i=0; i<arr.length;i++) {
+		    	for(int j=0;j<arr[0].length;j++) {
+		    		a[j][i]=arr[i][j];
+		    	}
+		    }
+		  
+		 return a; 
+	  }
 }
