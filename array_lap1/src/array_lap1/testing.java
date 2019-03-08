@@ -14,8 +14,7 @@ public class testing {
 	//	for(int i=0;i<a.length;i++) System.out.println(a[i]);
 		//System.out.println(k.average(a));
 	//	for(int i=0;i<a.length;i++) System.out.println(a[i]);
-	Fibb f = new Fibb();
-	f.Fibonacci();
+	t.Fibonacci();
 	/*	int [][]arr = new int [3][2]; 
 		int k=0; 
 		  for(int i=0; i<arr.length;i++) {
