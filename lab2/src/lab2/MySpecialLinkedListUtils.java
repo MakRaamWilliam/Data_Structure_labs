@@ -27,7 +27,7 @@ public class MySpecialLinkedListUtils {
 		} i = Head;
 		for(int j =0; j<(length-1)/2;j++) {
 			i = i.getNext();
-		} int x = i.getValue();
+		} int x = i.getValue();  i =Head;
 		for(int j =0; j<(length)/2;j++) {
 			i = i.getNext();
 		} int y = i.getValue();
