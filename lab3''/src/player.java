@@ -3,7 +3,7 @@
 import java.awt.Point;
 import java.util.LinkedList;
 
-public class player  {
+public class player implements IPlayersFinder  {
 	static int   maxrow =0;  static int mincol =100;
 	static int   maxcol =0;  static int minrow =100;
 	public static int numofones  (int [][]a , int row , int col) {
@@ -29,7 +29,7 @@ public class player  {
 	
 	
 	
-	public static Point[] findPlayers(String[] photo, int team, int threshold) {
+	public Point[] findPlayers(String[] photo, int team, int threshold) {
 	int size=photo.length;  int len= (photo[0].length()); int conp =0;
 	int  [][] a = new int [size][len];  LinkedList<Integer> cou = new LinkedList<Integer>();
 	Point p[] = new Point[100];
@@ -69,9 +69,9 @@ if(a[i][j] == 1) {  int n=numofones(a, i, j); if(n *4 >=threshold ) { p[conp] = 
 	
 		return p; }
 	
-	   public static void main(String[] args) {	
+	  /* public static void main(String[] args) {	
 
-  /*	String[] s = new String [] {	
+  	String[] s = new String [] {	
  			"44444H44S4",	
  			"K444K4L444",	
  			"4LJ44T44XH",	
@@ -81,7 +81,7 @@ if(a[i][j] == 1) {  int n=numofones(a, i, j); if(n *4 >=threshold ) { p[conp] = 
  			"G4W4HP4O4W",	
  			"4444ZDQ4S4",	
  			"4BR4Y4A444",	
- 			"4G4V4T4444"}; 	 */
+ 			"4G4V4T4444"}; 	
 String[] s = new String [] {	
 	"8D88888J8L8E888",	
 	"88NKMG8N8E8JI88",	
@@ -97,15 +97,14 @@ String[] s = new String [] {
 	"8W88X88ZT8KA8I8",	
 	"88SQGB8I8J88W88",	
 	"U88H8NI8CZB88B8",	
-	"8PK8H8T8888TQR8"}; 	
+	"8PK8H8T8888TQR8"}; 	 
 Point p[] = new Point[100];	
-
-p= findPlayers(s, 8, 9);    	
+   p= findPlayers(s, 4, 16);    	
 
 
 for(int i=0; p[i] != null ; i++)    System.out.println(p[i].x + " " + p[i].y); 	
 
-}  
+}   */
 		
 	
 	 
