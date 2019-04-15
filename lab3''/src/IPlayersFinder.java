@@ -1,5 +1,5 @@
 
-public interface IPlayersFinder {
+ public interface IPlayersFinder {
 
 	/**
 	* Search for players locations at the given photo
