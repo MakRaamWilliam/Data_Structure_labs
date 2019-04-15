@@ -104,7 +104,7 @@ if(a[i][j] == 1) {  int n=numofones(a, i, j); if(n *4 >=threshold ) { p[conp] = 
 	p= findPlayers(s, 8, 9);    
 	
 	
-	  for(int i=0; p[i] != null ; i++)  {  System.out.println(p[i].x + " " + p[i].y);  }
+	  for(int i=0; p[i] != null ; i++)    System.out.println(p[i].x + " " + p[i].y);  
 		
 	} 
 
