@@ -23,6 +23,15 @@ class stackTest {
 	       assertEquals("a b c - d + / e a - * c *" , ev.infixToPostfix("(a / (b - c + d)) * (e - a) * c "));
 	       assertEquals("a b / c - d e * + a c * -" , ev.infixToPostfix("a / b - c + d * e - a * c"));
 	       
-	}
+	       // tests for negative  & more one digit number 
+	      assertEquals(17, ev.evaluate (ev.infixToPostfix( "-3 +4 * 5" ) ));				// check negative number
+	      assertEquals(-60, ev.evaluate (ev.infixToPostfix( "(4 + 2) * -10" ) ));				// check negative number
 
+	      
+	    //check more  digit & floating result during evaluate 
+	      assertEquals(72, ev.evaluate (ev.infixToPostfix( "(35 + 2) + 7 / 2 * 10" ) ));
+	      
+	      
+	       
+	       }
 }
