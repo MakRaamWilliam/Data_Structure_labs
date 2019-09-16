@@ -11,7 +11,7 @@ public class dectest {
 			System.out.println(x);
 		
 	} catch (Exception e) {
-		System.out.println("error input");
+		System.out.println("error input  ");
 	}
 		Scanner s= new Scanner(System.in);
 	int x=s.nextInt();	
