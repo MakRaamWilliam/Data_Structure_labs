@@ -31,8 +31,9 @@ int main(int argc, char const *argv[])
     cout << setw(5) << "Starting programm...\n";
 
     // UNIVERSAL SECTION TOKEN
-    cout << "Enter the number of elements in the universel set -> ";
-    cin >> iSize;
+  do{  cout << "Enter the number of elements in the universel set -> ";
+    cin >> iSize; }
+    while(iSize<0);
     string sUniversal[iSize];
     cout << "Now enter your universal elements: \n";
     for(int i = 0; i < iSize; ++i)
@@ -40,16 +41,17 @@ int main(int argc, char const *argv[])
     sort(sUniversal, sUniversal + iSize);
 
     // SUBSETS SECTION
-    cout << "Enter your number of subsets -> ";
+  do{  cout << "Enter your number of subsets -> ";
     cin >> iSub;
-    cout << "\n";
+    cout << "\n";}
+    while(iSub<0);
     for(int i = 0; i < iSize; ++i)
         arr[0][i] = 1;
     for(int i = 0; i < iSub; ++i) {
         iEsize = 0;
         cout << "Enter your subset size -> ";
         cin >> iEsize;
-        while(iEsize > iSize) {
+        while(iEsize > iSize || iEsize<0 ) {
             cout << "A*a nt htst3bt -> ";
             cin >> iEsize;
         }
@@ -76,12 +78,13 @@ int main(int argc, char const *argv[])
 
     // OPERATIONS SECTION
     while(1) {
+            int iOne, iTwo;char x;
         string exp = "";
         cout << "/**\nEnter YOUR EXPRESSION seperated by spaces. <<But take care>> \n enter \"^\" for \"intersection\" \n \"+\" for \"union\" \n \"-\" for \"diff\"\n";
-        cout << "And your subSet are numbered from 1 to n containing universal as number 0\n";
-        int iOne, iTwo;
-        char x;
-        cin >> iOne >> x >> iTwo;
+     do{   cout << "And your subSet are numbered from 1 to n containing universal as number 0\n";
+
+        cin >> iOne >> x >> iTwo; }
+     while (iOne<0 || iOne >iSub || iTwo<0 || iTwo>iSub);
         switch(x) {
             case '^':
                 intersection(iOne, iTwo,sUniversal);
