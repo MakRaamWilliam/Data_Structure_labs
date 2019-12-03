@@ -2,13 +2,27 @@
 
 using namespace std;
 
-int fastexponent3(int a, int b, int m)
+long fastexponent1( long a,  long b , int m){
+  long c=1;
+  for(int i=1;i<=b;i++)
+    c=c*a;
+  return c %m;
+  }
+  long fastexponent2(long a, long b , int m){
+  long c=1;
+  for(int i=1; i<=b;i++)
+  c=(c*a)%m;
+
+  return c%m ;
+  }
+
+long fastexponent3(long a, long b, int m)
 {
     if (a == 0)
         return 0;
     if (b == 0)
         return 1;
-    int c;
+    long c;
     if (b % 2 == 0) {
         c = fastexponent3(a, b / 2, m);
         c = (c * c) % m;
@@ -20,10 +34,25 @@ int fastexponent3(int a, int b, int m)
 
     return (c + m) % m;
 }
+long fastexponent4(long a,  long b, int m)
+{
+    long  c = 1;
+
+    while (b > 0)
+    {
+        if (b %2 == 1)
+            c = (c*a) % m;
+
+
+        b = b/2;
+        a = (a*a) % m;
+    }
+    return c;
+}
 
 int main()  
 {  
-int a , b , m ;  cout<<"enter a, b, m"<<endl;
+    long a , b;int  m ;  cout<<"enter a, b, m"<<endl;
     cin>>a >>b>>m;
    printf("Power is %d", fastexponent3(a, b, m));
  
